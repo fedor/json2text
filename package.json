@@ -1,6 +1,11 @@
 {
   "name": "json2text",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "homepage": "https://github.com/korshunov/json2text",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/korshunov/json2text.git"
+  },
   "description": "Generate free-format text from JSON templates",
   "main": "index.js",
   "scripts": {

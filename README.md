@@ -2,7 +2,7 @@
 
 json2text generate free-format text from JSON templates (e.g. HTML generation).
 
-Install package globally
+Install package globally:
 ```
 npm install json2text -g
 ```
@@ -53,7 +53,7 @@ Run:
 j2t html
 ```
 
-This commend will search current work directory file-tree for ```.j2.node.json``` and ```.j2.json``` files and would compile ```.html``` output files:
+This command will search current work directory file-tree for ```.j2.node.json``` and ```.j2.json``` files and would compile ```.html``` output files:
 ```
 <ul style='list-style-type:circle'>
 <li> list item #1 </li>
