@@ -1,8 +1,0 @@
-{
-	"node": "t1",
-	"attr": "FEDOR",
-	"child": [
-		{"node": "t2", "child": "hi"},
-		{"node": "t3", "child": ""}
-	]
-}

@@ -1,0 +1,8 @@
+{
+	"_node": "list",
+	"style": "circle",
+	"_child": [
+		{"_node": "item", "_child": "list item #1"},
+		{"_node": "item", "_child": "list item #2"}
+	]
+}

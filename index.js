@@ -98,5 +98,6 @@ var compile = function(path, parent_template) {
 };
 
 var m = require('./lib/mon');
-m.mon(basedir, 'j2.node.json', null, upd_elems);
-m.mon(basedir, 'j2.json', process.argv[2] || 'out', compile);
+var out_ext = process.argv[2] || 'out';
+m.mon(basedir, 'j2.node.json', null, upd_elems, [['j2.json', out_ext, compile]]);
+m.mon(basedir, 'j2.json', out_ext, compile);

@@ -1,0 +1,10 @@
+[
+	{
+		"_name": "list",
+		"style": "disc",
+		"_text": "<ul style='list-style-type:%%style%%'>\n%%_text%%</ul>"
+	}, {
+		"_name": "item",
+		"_text": "<li> %%_text%% </li>\n"
+	}
+]

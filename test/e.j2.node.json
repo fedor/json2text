@@ -1,5 +1,0 @@
-[
-	{"_name": "t1", "attr": "default attribute", "_text": "<t1 attr='%%attr%%'>\n%%_text%%</t1>"},
-	{"_name": "t2", "_text": "<t2>%%_text%%</t2>\n"},
-	{"_name": "t3", "_text": "<t3>%%_text%%</t3>\n"}
-]
