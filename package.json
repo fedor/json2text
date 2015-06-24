@@ -1,6 +1,6 @@
 {
   "name": "json2text",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/korshunov/json2text",
   "repository": {
     "type": "git",
@@ -15,7 +15,8 @@
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "j2t": "index.js"
+    "j2t": "index.js",
+    "j2n": "j2node.js"
   },
   "dependencies": {
     "find": "^0.2.2",

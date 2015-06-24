@@ -7,6 +7,10 @@ Install package globally:
 npm install json2text -g
 ```
 
+## Tools
+ - ```j2t```: compile templates
+ - ```j2n```: generate template stubs from text files
+
 ## How to use example
 
 ### 1. Define template elements
@@ -62,6 +66,7 @@ This command will search current work directory file-tree for ```.j2.node.json``
 ```
 
 ## Features and info
+ - ```j2n file.txt``` convert ```file.txt``` to ```file.txt.j2.node.json``` stub
  - Each ```.j2.node.json``` and ```.j2.json``` change leads to output file(s) regeneration
  - JSON fields starts with ```_ (underscore)``` (e.g. ```_node```, ```_name```) are reserved for json2text future use, don't use them for attributes
 
