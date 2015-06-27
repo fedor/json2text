@@ -33,12 +33,12 @@ var upd_elems = function(path) {
 
 	j.forEach(function(e) {
 		try {
-			if (!_.isObject(e)) throw JSON.stringify(e)+' is invalid. skipped'
-			if (!e._name)       throw JSON.stringify(e)+': _name missed. skipped'
-			if (!e._text)       throw e._name+': _text missed. skipped'
+			if (!_.isObject(e))       throw JSON.stringify(e)+' is invalid. skipped'
+			if (!e._name)             throw JSON.stringify(e)+': _name missed. skipped'
+			if (!e._text && !e._file) throw e._name+': _text or _file missed. skipped'
 		
 			elements[e._name] = {
-				text: e._text,
+				text: e._text || fs.readFileSync('./'+e._file, {'encoding': 'utf8'}),
 				attrs: get_attrs(e)
 			}
 			console.log('\t'+e._name+': loaded');
@@ -72,12 +72,12 @@ var compile = function(path, parent_template) {
 	var base_parts = []
 	j.forEach(function(n) {
 		try {
-			if (!_.isObject(n))                     throw JSON.stringify(n)+' is invalid. skipped'
-			if (!n._node)                           throw JSON.stringify(n)+': node missed. skipped'
-			if (!n._child && !_.isString(n._child)) throw n._node+': child missed. skipped'
+			if (!_.isObject(n)) throw JSON.stringify(n)+' is invalid. skipped'
+			if (!n._node)       throw JSON.stringify(n)+': node missed. skipped'
+			// if (!n._child && !_.isString(n._child)) throw n._node+': child missed. skipped'
 		
-			var t = n._node;
-			var c = n._child;
+			var t = (n._node||n._n);
+			var c = (n._child||n._c||"");
 			var e = elements[t];
 			if (!e) throw t+': unknown element. skipped'
 			
